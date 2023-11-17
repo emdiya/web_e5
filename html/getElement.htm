@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element</title>
+</head>
+<body>
+    <p>paragraph one</p>
+    <p class="tf">paragraph two</p>
+    <p id="three">paragraph three</p>
+    <p class="tf">paragraph four</p>
+    <p>paragraph five</p>
+    <script type="text/javascript">
+        var p = document.getElementsByTagName("p");
+        alert(p.length)
+        
+
+        /*
+
+        var tf = document.getElementsByClassName("tf");
+        // alert(tf.length)
+        if(tf.length > 0){
+            alert("selected");
+        }else{
+            alert("fail to selected");
+        }
+    
+
+        ក្នុង​ Javascript ពាក្យដែលផ្តើមដោយអក្សរធំសុទ្ធតែជា object
+        របៀបបង្កើតអឺរ៉េ
+                const array's name = [ទិន្នន័យផ្ទុកក្នុងធាតុទី១, ទិន្នន័យផ្ទុកក្នុងធាតុទី២, ...];
+                or
+                const array's name = new Array(ទិន្នន័យផ្ទុកក្នុងធាតុទី១, ទិន្នន័យផ្ទុកក្នុងធាតុទី២, ...);
+
+        length ជា​​ property​នៃ array ដែលប្រាប់ប្រវែងArray ឬ ចំនួនធាតុដែល​ Array មាន។
+
+        array ជាឈ្មោះដែលអាចផ្ទុកទិន្នន័យបានច្រើន(same datatype)ដោយសារ​index។
+        collection = collection objects = array of objects
+        var three = document.getElementById("three");
+         if(three != null) 
+            alert("selected");
+         else
+            alert("fail to selected");
+        */
+    </script>
+</body>
+</html>

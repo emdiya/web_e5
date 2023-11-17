@@ -1,0 +1,30 @@
+#dataCollection{
+    width: 288px;
+    margin: 16px auto;
+}
+.label1{
+    display: inline-block;
+    width: 96px;
+}
+legend{
+    text-align: center;
+}
+input, fieldset, select{
+    border-radius: 5px;
+}
+input:hover,select:hover{
+    background-color: aqua;
+}
+fieldset> div{
+    display: inline-block;
+}
+select{
+    width: 288px;
+}
+#btn,#rst,#smt{
+    border-width: 1px;
+    width: 92px;
+    margin-top: 10px;
+}
+
+/* inline-block kleat pi knea 5px */

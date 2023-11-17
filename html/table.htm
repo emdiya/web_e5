@@ -1,0 +1,61 @@
+<html>
+   <head>
+      <title>តារាង - table</title>
+      <link rel="stylesheet" href="../css/e5.css">
+      <style>
+         table, th, td{
+            border: 1px solid black;
+         }
+         table{
+            border-collapse: collapse;
+            width: 35%;
+            margin: 16px auto;
+         }
+         tr:nth-child(2n){  /* even */
+            background-color: lightgrey ;
+            color: black;
+         }
+         tr:nth-child(2n+1){  /* odd */
+            background-color: lightskyblue;
+            color: black;
+         }
+         tr:nth-child(1){
+            background-color: black ;
+            color: white;
+         }
+         tr:hover{
+            background-color: plum;
+         }
+         tr:nth-child(1):hover{
+            background-color: black;
+         }
+      </style>
+      <!--​រចនាតារាង​ styling table
+          nth-child(លេខរៀង​ឬ​អថេរ) ជ្រើសយកកូនធាតុទី__ ដូចជាកូនទី១​ ទី២​ ...។
+          border រចនាស៊ុម​នៃ​ table, th,td 
+          border-collapse: collapse; វេញស៊ុមនៃតារាងនិងក្រឡាចូលគ្នាជាស៊ុម
+          *ចំណាំ block element បានកំណត់​ width ហើយកាលណាដាក់​ margin-left and margin-right​​ ទៅតម្លៃ​ auto ធាតុនោះថិតចំកណ្តាល
+         -->
+   </head>
+   <body>
+      <div id="hMenu"><!-- horizontal menu ម៉ឺនុយផ្តេក-->
+         <a href="../index.htm">ទំព័រដើម</a>
+         <a href="text.htm">អត្ថបទ</a>
+         <a href="image.htm">រូបភាព</a>
+         <a href="list.htm">បញ្ជី</a>
+         <a id="current" href="#">តារាង</a>
+         <a href="media.htm">ពហុព័ត៌មាន</a>
+      </div>
+
+      <table >
+         <tr><th>ល.រ</th><th>ឈ្មោះនិស្សិត</th><th>លេខទូរស័ព្ទ</th></tr>
+         <tr><td>១</td><td>ហង្ស វាសនាជេមស៍</td><td>០១0៣៤៥៦៧៨</td></tr>
+         <tr><td>២</td><td>ហេង សេដ្ឋសេវ័ន្ត</td><td>០១១៣៤៥៦៧៨</td></tr>
+         <tr><td>៣</td><td>សុខហេង សុខវាសនា</td><td>០១២៣៤៥៦៧៨</td></tr>
+         <tr><td>៤</td><td>លឹម សេងគឹមស៊្រុន</td><td>០១៥៣៤៥៦៧៨</td></tr>
+         <tr><td>៥</td><td>ស៊្រុន វឌ្ឍនាដាលាភ</td><td>០១៦៣៤៥៦៧៨</td></tr>
+         <tr><td>៦</td><td>គឹម ចាន់តារារាជ</td><td>០១៧៣៤៥៦៧៨</td></tr>
+         <tr><td>៧</td><td>ឈៀក ឧត្តមបញ្ញា</td><td>០៩៧២៣៤៥៦៧៨</td></tr>
+      </table>
+   </body>
+</html>
