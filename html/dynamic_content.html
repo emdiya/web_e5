@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Conetent</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 320px;
+            height: 220px;
+            font-size: 106px;
+            text-align: center;
+            padding-top: 64px;
+            border-radius: 50%;
+
+        }
+        #rnd1{
+            background-color: greenyellow;
+        }
+        #rnd2{
+            background-color: yellow;
+        }
+        #rnd3{
+            background-color: red;
+        }
+        div{
+            width: 970px;
+            margin: 16px auto;
+        }
+        input{
+            width: 320px;
+            font-size: 24px;
+            border-radius: 8px;
+            margin-top: 4px;
+            border-width: 1px;
+            padding: 10px;
+        }
+        form{
+            width: 645px;
+            margin: 0 auto;
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <span id="rnd1">0-9</span>
+        <span id="rnd2">1-8</span>
+        <span id="rnd3">2-7</span>
+       
+        <form>
+            <input type="button" id="butStart" value="ផ្តើម">
+            <input type="button" id="butStop" value="បញ្ឈប់">
+        </form>
+    </div>
+    <script type="text/javascript">
+        /*
+            window object ជាវត្ថុប្រើប្រាស់អាចឲ្យ javascript ប្រើមុខងារនានា នៃ tab របស់ browser ដូចជា អាចកំណត់កិច្ចការដំណើរការ
+            លុបចោលនៅពេលដែលកិច្ចការត្រូវដំណើរការ។ល។
+
+            setInterval (កិច្ចការ, ពេលគិតជាមីលីវិនាទី)ជា method មានមុខងារធ្វើឲ្យ
+            កិច្ចការ(function)ដំណើរការសារចុះសារឡើងមិនកំណត់ចំនួនដងឲ្យតែដល់ពេលវេលាជាមីលីវិនាទីបានបញ្ជាក់។
+
+            clearInternal (អាយឌីសម្គាល់ដំណើរការ) លុបចោលពេលធ្វើកិច្ចការដំណើរការបានកំណត់ដោយ setInterval។
+
+            *** ប្រើ event របស់ object 
+
+            របៀបទី១
+                ធាតុបានជ្រើស addEventListener ("ឈ្មោះevent", ឈ្មោះfunction);
+            របៀបទី២
+                ធាតុបានជ្រើសរើស, onឈ្មោះevent = ឈ្មោះfunction;
+                ឈ្មោះeventប្រើប្រាស់ញឹកញាប់មាន click, change, focus, blur ។ល។
+        */
+        var rnd1 = document.getElementById("rnd1");
+        var rnd2 = document.getElementById("rnd2");
+        var rnd3 = document.getElementById("rnd3");
+        var butStart = document.getElementById("butStart");
+        var butStop= document.getElementById("butStop");
+        var intervalID = 0; //អថេរផ្ទុកអាយឌីនៃ loop ដែលកំណត់ដោយេពេលវេលា
+
+        function random(){
+            rnd1.textContent = Math.floor(Math.random()*10);
+            rnd2.textContent = Math.floor(Math.random()*8+1);
+            rnd3.textContent = Math.floor(Math.random()*6+2);
+        }
+        butStart.onclick = function(){ intervalID= window.setInterval(random,500)}
+        butStop.onclick= function(){window.clearInterval(intervalID);};
+
+       
+
+    </script>
+</body>
+</html>
