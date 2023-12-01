@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Attribute2</title>
+    <style>
+        /*float: left ការបណ្តែតធាតុឡើងលើ */
+        .hidden{
+            width: 0;
+            height: 0;
+            float: left; 
+        }
+        div,#feature{
+            width: 500px;
+            height: 350px;
+        }
+        div{
+            margin: 0 auto;
+        }
+        #feature{
+            border-radius: 8px;
+            border: 1px solid lightgray;
+        }
+        #title{
+            font-family: 'Khmer OS Muol Light';
+            background-color: greenyellow;
+            display: block;
+            width: 504px;
+            margin: -5px 0 0 -2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- use hidden for pre-loading of img-->
+        <img class="hidden" src="../media/Ceremony Hall.jpg" alt="">
+        <img class="hidden" src="../media/IFL.jpg" alt="">
+        <img class="hidden" src="../media/CJCC.jpg" alt="">
+        <img class="hidden" src="../media/CKCC.jpg" alt="">
+        <img id="feature" src="../media/Building A.jpg" alt="">
+        <span id="title">អគារអេ</span>
+    </div>
+
+    <script type="text/javascript">
+        /* បង្កើតអឺរ៉េពីរវិមាត្រ(តារាង)ជួរឈរទី១ផ្ទុកអាសយដ្ធានរូបភាព ឯជួរឈរទី២ផ្ទុកចំណងជើងរូបភាព។
+        ចំណាំវិមាត្រទី១ ជួរដេកនិងវិមាត្រទី២ គឺជួរឈរ
+
+        */
+        var slides = [
+            ["../media/Building A.jpg","អគារអេ"],
+            ["../media/Ceremony Hall.jpg","សាលបុណ្យ"],
+            ["../media/IFL.jpg","វិទ្យាស្ថាបភាសាបរទេស"],
+            ["../media/CJCC.jpg","មជ្ឈមណ្ឌលប្រតិបត្តិការកម្ពុជាជប៉ុន"],
+            ["../media/CKCC.jpg","មជ្ឈមណ្ឌលប្រតិបត្តិការកម្ពុជាកូរ៉េ"],
+        ];
+
+        var feature = document.getElementById("feature");
+        var title = document.getElementById("title");
+
+        var i = 0;
+        var colors = [
+            ["GreenYellow","White"],
+        ]
+        function slide(){
+            feature.src = slides[++i][0];
+            title.textContent = slides[i][1]
+            if(i == 4){
+                i = -1;
+            }
+        }
+
+        var colors = [
+            [
+                "Greenyellow","white"
+            ]
+        ]
+        window.setInterval(slide, 1000);
+    </script>
+</body>
+</html>
