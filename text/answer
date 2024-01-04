@@ -1,7 +1,78 @@
-jQuery គឺជាបណ្ណាល័យ JavaScript ដែលផ្ដល់នូវប្រភេទវត្ថុប្រើសប្រាស់ជាច្រើនសម្រាប់យកមកបង្កើតវេបផេកដែលអាចប្រែប្រួលខ្លួនឯងដោយប្រើ
-ធនធានរបស់ម៉ាសុីនអ្នកទស្សនា  ។
-ដើម្បីប្រើប្រាស់f jQuery ត្រូវ
-    ក. ប្រើធាតុ script ដើម្បីភ្ជាប់ទៅកាន់ឯកសារបណ្ណាល័យ jQuery
-    ខ. បង្កើតឯកសារ JavaScript ថ្មីមួយសម្រាប់សរសេរកូដ jQuery
-    គ. ប្រើធាតុ script ដើម្បីភ្ជាប់ទៅកាន់ឯកសារ JavaScript ទើបបានបង្កើត
-    ឃ. ផ្ដើមសរសេរក្នុងឯកសារ JavaScript ដោយប្រើ jQuery ready Event
+1. ពន្យល់ពី html និងសរសេកូដ​​html បង្កើតវេបផេកគម្រូ
+-HTML គឺជា HyperText Markup Languageដែលជាភាសារបង្កើតនៅ វេបផេកគម្រូ​ដូចជា បង្កើតអត្ថបទ (content) ឬព័ត៌មានលើវេបផេក។
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title>Page Title</title>
+	</head>
+	<body>
+
+	<h1>This is a Heading</h1>
+	<p>This is a paragraph.</p>
+
+	</body>
+	</html>
+	
+2. ពន្យល់ពី Bootstrap និងរបៀបបអាចឲ្យ Website មួយប្រើបាន
+-BootStrap ជាឧបករណ៍ជំនួយក្នុងការបង្កើតវេបសាយដែលអាចតប (responsive) ព័ត៌មានបានតាមអេក្រង់ច្រើនទំហំដោយប្រើធនធានម៉ាស៊ីនអ្នកទស្សនា (front-end) ឬ (Client side)។ 
++របៀបប្រើ
+-ដើម្បីប្រើ​  Bootstrap បានជាដំបូងយើងត្រូវ​ download file bootstrap ពីវេបសាយ 
+-បន្ទាប់មកយើងត្រូវ​ import ចូល project របស់យើង​តាម​ folder directory ដែលយើងបានកំណត់ 
+-ប្រើ​ class id ណាមួយដែលយើងចង់បានមើលទៅតាមរូបរាងរបស់​ web page
+  ex: <p class="container">
+	<p class="container-fluid">
+
+3. ពន្យល់អំពី Front-End Web development
+ការអភិវឌ្ឍន៍គេហទំព័រផ្នែកខាងមុខ (Front-End Web​ development) គឺជាអ្វីគ្រប់យ៉់់ាងនៅពីក្រោយខ្នងដែលអ្នកមើលឃើញ  និងធ្វើអន្តរកម្មជាមួយគេហទំព័រ ឬវេបផេក។ វាជាសិល្បៈ និង ជាវិទ្យាសាស្ត្រក្នុងការបង្កើតរូបរាង Interface(UI) និង បទពិសោធន៍អ្នកប្រើប្រាស់់​ (UX) ដែលជាធាតុផ្សំដែលមើលឃើញ និងអន្តរកម្មដែលធ្វើឱ្យគេហទំព័រ ឬវេបផេក មួយមានភាពទាក់ទាញ និងមានមុខងារប្រើប្រាស់​ (functional) ។ ការប្រើប្រាស់ HTML និង CSS ជាមូលដ្ឋានគំរូរុកម្មុខាងមុខ(Front-End)ទាំងពីរនេះគឺគ្រប់គ្រងការបង្កើតសេចក្ដីលម្អិតបញ្ហាអត្ថបទ(content)និងរូបរាង(body)។
+-HTML គឺជា HyperText Markup Languageដែលត្រូវបានប្រើដើម្បីបង្កើតអត្ថបទ (content) ឬព័ត៌មានលើវេបផេក
+-CSS គឺជា Cascading Style Sheets ដែលត្រូវបានប្រើដើម្បីបង្កើតគំរូរុកម្មុខាងមុខទៅកាន់អ្នកប្រើ​ ។ CSS ប្រើដើម្បីកំណត់រូបរាង, ការរេចនារូបរាង ផ្សេងៗលើវេបផេក ។
+
+
+លំហាត់​
+
+<html>
+   <head>
+      <title>លទ្ធផល</title>
+      </head>
+   <body>
+      <div>
+         <form id="frmS1" action="#" method="get"> 
+            <div>
+               <label>Enter your heigh (m) </label>
+               <input type="text" id="txtHeight" name="txtHeight">
+            </div>
+            <div>
+               <label>Enter your weight (kg) </label>
+               <input type="text" id="txtWeight" name="txtWeight">
+            </div>
+        
+            <div>
+               <input type="button" id="btnCalculate" name="btnCalculate" value="គណនា (JavaScript)">
+            </div>
+         </form>
+      </div>
+      <div id="divOutput">&nbsp;</div>
+
+      <script type="text/javascript">
+         var btnCal=document.getElementById("btnCalculate");   
+         btnCal.onclick=function(){
+            var weight= document.getElementById("txtWeight").value; 
+            var heigh = document.getElementById("txtHeight").value;
+
+            var bmi = weight/ (heigh*heigh); 
+            var result = "";            
+            
+            if(bmi < 18.5) {
+                result = " You are underweight ";
+            }else if (bmi >= 18.5 && bmi <24.99) {
+                result = " You are normalweight ";
+            }else if(bmi >= 25 && bmi < 29.99){
+                result = " You are overweight ";
+            }
+           
+            document.getElementById("divOutput").innerText= result; 
+        }
+         
+      </script>
+
+    </body>
