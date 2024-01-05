@@ -76,3 +76,59 @@
       </script>
 
     </body>
+</html>
+
+លំហាត់​ 
+
+<html>
+<head>
+    <title>លទ្ធផល</title>
+</head>
+
+<body>
+    <div>
+        <form id="frmS1" action="#" method="get">
+            <div>
+                <label>Gender</label>
+                <select id="ddlGender" name="ddl">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label>Height (cm)</label>
+                <input type="text" id="txtHeight" name="txtHeight">
+            </div>
+            <div>
+                <label>Weight (kg)</label>
+                <input type="text" id="txtWeight" name="txtWeight">
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="text" id="txtAge" name="txtAge">
+            </div>
+            <div>
+                <input type="button" id="btnCalculate" name="btnCalculate" value="Calculate BMR">
+            </div>
+        </form>
+    </div>
+    <div id="divOutput">&nbsp;</div>
+
+    <script type="text/javascript">
+        var btnCal = document.getElementById("btnCalculate");
+        btnCal.onclick = function () {
+            var gender = document.getElementById("ddlGender").value;
+            var height = document.getElementById("txtHeight").value;
+            var weight = document.getElementById("txtWeight").value;
+            var age = document.getElementById("txtAge").value;
+            var bmr = "";
+            if (gender == "male") {
+                bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+            } else if(gender == "female") {
+                bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+            }
+            document.getElementById("divOutput").innerText = bmr;
+        }
+    </script>
+</body>
+</html>
